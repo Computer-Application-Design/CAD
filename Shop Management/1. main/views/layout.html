@@ -13,15 +13,7 @@
         <div class="profile">
           <!-- 로그인 후 -->
           {% if user and user.id %}
-            <div class="user-name">{{'안녕하세요! ' + user.nick + '님'}}</div>
-            <div class="half">
-              <div>팔로잉</div>
-              <div class="count following-count">{{followingCount}}</div>
-            </div>
-            <div class="half">
-              <div>팔로워</div>
-              <div class="count follower-count">{{followerCount}}</div>
-            </div>
+          <div class="user-name">{{'안녕하세요! ' + user.username + '님'}}</div>
           <input id="my-id" type="hidden" value="{{user.id}}">
           <a id="my-profile" href="/profile" class="btn">내 프로필</a>
           <a id="logout" href="/auth/logout" class="btn">로그아웃</a>
