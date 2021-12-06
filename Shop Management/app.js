@@ -2,11 +2,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path')
-
+const config = require('./config');
 const adminData = require("./routes/admin");
 const shopRoutes = require('./routes/shop');
-
-const Port = 3000;
 
 const app = express();
 
@@ -26,6 +24,6 @@ app.use('*', (req, res, next ) => {
 
 
 
-app.listen( Port, ( ) => {
-    console.log(`Server is running on port: ${Port}`);
+app.listen( config.port, ( ) => {
+    console.log(`Server is running on port: ${config.port}`);
 })
