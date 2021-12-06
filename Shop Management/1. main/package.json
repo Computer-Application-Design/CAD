@@ -1,0 +1,12 @@
+{
+  "name": "main-page",
+  "version": "1.0.0",
+  "description": "Account func, Login func, Main Page ",
+  "main": "account.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node account.js"
+  },
+  "author": "codynators",
+  "license": "ISC"
+}
