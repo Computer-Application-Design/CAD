@@ -1,12 +1,12 @@
 {
-  "name": "test",
+  "name": "product-management",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "codynators",
   "license": "ISC",
   "dependencies": {
     "assert": "^2.0.0",

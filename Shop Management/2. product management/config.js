@@ -1,3 +1,5 @@
+// 2021.12.06 2017154003 고현석 (.env파일과 config파일 연동)
+
 'use strict';
 const dotenv = require('dotenv');
 const assert = require('assert');
