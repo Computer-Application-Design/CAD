@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang=en)
+  head
+    meta(charset="UTF-8")
+    title #{docTitle}
+    link(rel="stylesheet", href="/css/main.css")
+    link(rel="stylesheet", href="/css/product.css")
+  
+  body 
+    header.main-header
+      nav.main-header__nav
+        ul.main-header__item-list
+          li.main-header__item
+            a.active(href="/") Shop
+          li.main-header__item
+              a.active(href="/admin/add-product") Add Product
+
+    // 2021.12.06 2017154003 고현석 (form data를 Post로 받는 부분 수정)
+    main
+      if prods.length > 0 
+        .grid
+          each product in prods
+            article.card.product-item
+              header.card__header
+                h1.product__title #{product.title}              
+              .card__image
+                - var addr = `${product.image}`
+                img(src=addr, alt="Can't Access Image")
+              .card__content
+                h2.product__price $#{product.price}
+                p.product__description #{product.description}
+                .card__actions
+                  button.btn Add to Cart
+      else
+        h1 No products
