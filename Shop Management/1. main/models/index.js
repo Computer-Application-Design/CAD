@@ -5,7 +5,7 @@ const User = require('./user');
 
 const db = {};
 const sequelize = new Sequelize(
-  config.database, config.username, config.password, config,
+  config.database, config.username, config.password, config, config.operatorsAliases, config.host
 );
 
 db.sequelize = sequelize;
