@@ -12,9 +12,10 @@ const app = express();
 
 const DB_HOST = config.db_host;
 const DB_NAME = config.db_name;
+const DB_DOCKER = config.db_docker;
 const DB_USER = config.db_user;
 const DB_PASS = config.db_pass;
-mongoose.connect(`mongodb://${DB_HOST}/${DB_NAME}`, {
+mongoose.connect(`mongodb://${DB_DOCKER}/${DB_NAME}`, {
   dbName: DB_NAME,
   useNewUrlParser: true
 }, (error) => {

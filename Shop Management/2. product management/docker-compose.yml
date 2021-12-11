@@ -1,0 +1,21 @@
+version: "3"
+
+services: 
+  app:
+    container_name: add-product
+    build: 
+      context: .
+      dockerfile: dockerfile
+    ports: 
+      - 3001:3001
+    volumes: 
+      - .:/app
+      - '/app/node_modules'
+    external_links:
+      - mongo
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - '27017:27017'
