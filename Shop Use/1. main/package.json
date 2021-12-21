@@ -1,13 +1,14 @@
 {
-  "name": "nodebird",
+  "name": "codynators",
   "version": "0.0.1",
   "description": "익스프레스로 만드는 SNS 서비스",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
-  "author": "ZeroCho",
-  "license": "MIT",
+  "author": "codynators",
+  "license": "ISC",
   "dependencies": {
     "bcrypt": "^4.0.1",
     "cookie-parser": "^1.4.6",
