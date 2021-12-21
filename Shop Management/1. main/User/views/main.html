@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+<a id="join" href="/join" class="btn">회원가입</a>
+{% block content %}
+    <div class="timeline">
+      {% if user %}
+        <div>
+          <form id="product-management" action="http://localhost:3001" method="post" enctype="multipart/form-data">
+            <div class="input-group">
+              <button id="product-management" type="submit" class="btn">상품 관리</button>
+            </div>
+          </form>
+          <form id="order-management" action="http://localhost:3002" method="post" enctype="multipart/form-data">
+            <div class="input-group">
+              <button id="order-management" type="submit" class="btn">주문 관리</button>
+            </div>
+          </form>
+        </div>
+      {% endif %}
+    </div>
+{% endblock %}
