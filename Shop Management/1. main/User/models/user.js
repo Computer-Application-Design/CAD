@@ -17,10 +17,6 @@ module.exports = class User extends Sequelize.Model {
         type: Sequelize.STRING(15),
         allowNull: false,
       },
-      depart: {
-        type: Sequelize.STRING(100),
-        allowNull: true,
-      },
       mobile: {
         type: Sequelize.STRING(10),
         allowNull: false,
@@ -34,7 +30,7 @@ module.exports = class User extends Sequelize.Model {
       timestamps: false,
       underscored: false,
       modelName: 'User',
-      tableName: 'manager',
+      tableName: 'customer',
       paranoid: true,
       charset: 'utf8',
       collate: 'utf8_general_ci',

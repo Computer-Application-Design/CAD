@@ -12,10 +12,6 @@ router.get('/profile', isLoggedIn, (req, res) => {
   res.render('profile', { title: 'CAD-SHOP' });
 });
 
-router.get('/join', isNotLoggedIn, (req, res) => {
-  res.render('join', { title: 'CAD-SHOP' });
-});
-
 router.get('/', (req, res, next) => {
   const twits = [];
   res.render('main', {

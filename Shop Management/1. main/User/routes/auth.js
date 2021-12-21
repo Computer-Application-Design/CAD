@@ -18,7 +18,6 @@ router.post('/join', isNotLoggedIn, async (req, res, next) => {
       id,
       passwd: hash,
       username,
-      depart,
       mobile,
       email,
     });
