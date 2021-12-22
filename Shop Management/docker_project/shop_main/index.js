@@ -9,7 +9,7 @@ const dotenv = require('dotenv'); // 환경 설정
 const pageRouter = require('./routes/page'); // 쇼핑몰 페이지 라우터
 const productRouter = require('./routes/product'); // 상품 등록 라우터
 const userRouter = require('./routes/users');
-const Product = require('./schemas/product');
+const productAddRouter = require('./routes/productAdd');
 
 dotenv.config()
 const app = express();
@@ -39,6 +39,7 @@ app.use(session({ // 세션 미들웨어
 app.use('/', pageRouter); // GET / 라우터
 app.use('/products',productRouter); // GET /products 라우터
 app.use('/users',userRouter);
+app.use('/productAdd',productAddRouter); // 관리자만 들어갈 수 있는 경로
 
 //미들 웨어 사용, 미들웨어는 app.use, app.get으로 미들웨어 사용 app.
 app.use((req, res, next) => {

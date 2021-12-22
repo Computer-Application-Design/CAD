@@ -8,6 +8,8 @@ services:
       - '4001:4001'
     external_links:
       - mongo
+    networks: 
+      - codynators_net
 
   mongo:
     container_name: mongo
@@ -17,3 +19,9 @@ services:
     restart: always
     volumes:
       - ./mongo_volume:/data/db
+    networks: 
+      - codynators_net
+
+networks: 
+  codynators_net: 
+    external: true

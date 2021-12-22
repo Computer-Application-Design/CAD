@@ -2,6 +2,7 @@ version: "3"
 
 services: 
   mysql_server:
+    container_name: mysql_con
     platform: linux/x86_64
     image: mysql:8.0.26
     environment: 
@@ -11,11 +12,20 @@ services:
       - MYSQL_ROOT_PASSWORD=rhgustjr9402!
     volumes:
       - './mysql_volume:/var/lib/mysql'
+    networks: 
+      - codynators_net
+
   app:
     container_name: user_con
     restart: always
     build: .
     ports:
-      - '3000:3000'
+      - '3001:3001'
     external_links:
       - mysql_server
+    networks: 
+      - codynators_net
+
+networks: 
+  codynators_net: 
+    external: true

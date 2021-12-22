@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8e52ee94eb.js" crossorigin="anonymous"></script>
+    <title>KPU SHOP MALL</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <i class="fas fa-shopping-bag"></i>
+            <a href="">KPU SHOP</a>
+        </div>
+
+        <ul class="navbar__menu">
+            <li><a href="/">HOME</a></li>
+            <li><a href="">LOGIN/REGISTER</a></li>
+            <li><a href="/products">PRODUCT</a></li>
+            <li><a href="">CART</a></li>
+            <li><a href="">MANAGEMENT</a></li>
+
+        </ul>
+
+        <ul class="navbar__icons">
+            <li><i class="fas fa-school"></i></li>
+            <li><i class="fab fa-instagram"></i></li>
+        </ul>
+
+    </nav>
+
+    
+    <div>
+        <form id="market-form">
+            <fieldset>
+                <legend>상품 등록</legend>
+                <div><input id="productname" type="text" placeholder="상품 이름"></div>
+                <div><input id="price" type="number" placeholder="상품 가격"></div>
+                <div><input id="inventory" type="number" placeholder="재고량"></div>
+                <div><input id="source" type="text" placeholder="이미지 주소"></div>
+                <button type="submit">등록</button>
+            </fieldset>
+        </form>
+    </div>
+    <!-- <div>
+        {%for product in products%}
+        <tr>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.inventory}}</td>
+        </tr>
+        {% endfor %}
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/shopmall.js"></script>
+</body>
+</html>
