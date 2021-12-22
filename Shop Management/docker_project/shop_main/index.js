@@ -13,7 +13,7 @@ const Product = require('./schemas/product');
 
 dotenv.config()
 const app = express();
-app.set('port', process.env.PORT || 3000); // 포트 설정 process.env.PORT객체에 포트 속성이 있다면 그 값 이용 없다면 3000으로 설정
+app.set('port', process.env.PORT || 4001); // 포트 설정 process.env.PORT객체에 포트 속성이 있다면 그 값 이용 없다면 3000으로 설정
 app.set('view engine', 'html');
 nunjucks.configure('views', {
   express: app,
