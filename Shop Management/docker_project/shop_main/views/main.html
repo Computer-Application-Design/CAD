@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8e52ee94eb.js" crossorigin="anonymous"></script>
+    <title>KPU SHOP MALL</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <i class="fas fa-shopping-bag"></i>
+            <a href="">KPU SHOP</a>
+        </div>
+
+        <ul class="navbar__menu">
+            <li><a href="http://localhost:80/">HOME</a></li>
+            <li><a href="">LOGIN/REGISTER</a></li>
+            <li><a href="http://localhost:80/products">PRODUCT</a></li>
+            <li><a href="">CART</a></li>
+            <li><a href="">MANAGEMENT</a></li>
+
+        </ul>
+
+        <ul class="navbar__icons">
+            <li><i class="fas fa-school"></i></li>
+            <li><i class="fab fa-instagram"></i></li>
+        </ul>
+
+    </nav>
+
+    <br><br><br>
+    <div class="section">
+        <input type="radio" name="slide" id="slide01" checked>
+        <input type="radio" name="slide" id="slide02">
+        <input type="radio" name="slide" id="slide03">
+        <div class="slidewrap">
+            
+            <ul class="slidelist">
+                <!-- 슬라이드 영역 -->
+                <li class="slideitem">
+                    <a>
+                        <div class="textbox">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                        <img src="/slide01.jpg">
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a>
+                        
+                        <div class="textbox">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                        <img src="/slide02.jpg">
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a>
+                        
+                        <div class="textbox">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                        <img src="/slide03.jpg">
+                    </a>
+                </li class="slideitem">
+    
+                <!-- 좌,우 슬라이드 버튼 -->
+                <div class="slide-control">
+                    <div>
+                        <label for="slide03" class="left"></label>
+                        <label for="slide02" class="right"></label>
+                    </div>
+                    <div>
+                        <label for="slide01" class="left"></label>
+                        <label for="slide03" class="right"></label>
+                    </div>
+                    <div>
+                        <label for="slide02" class="left"></label>
+                        <label for="slide01" class="right"></label>
+                    </div>
+                </div>
+    
+            </ul>
+            <!-- 페이징 -->
+            <ul class="slide-pagelist">
+                <li><label for="slide01"></label></li>
+                <li><label for="slide02"></label></li>
+                <li><label for="slide03"></label></li>
+            </ul>
+        </div>
+    
+        
+    </div>
+    <div>
+        <form id="market-form">
+            <fieldset>
+                <legend>상품 등록</legend>
+                <div><input id="productname" type="text" placeholder="상품 이름"></div>
+                <div><input id="price" type="number" placeholder="상품 가격"></div>
+                <div><input id="inventory" type="number" placeholder="재고량"></div>
+                <div><input id="source" type="text" placeholder="이미지 주소"></div>
+                <button type="submit">등록</button>
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <form id="user-form">
+          <fieldset>
+            <legend>사용자 등록</legend>
+            <div><input id="username" type="text" placeholder="이름"></div>
+            <div><input id="age" type="number" placeholder="나이"></div>
+            <div><input id="married" type="checkbox"><label for="married">결혼 여부</label></div>
+            <button type="submit">등록</button>
+          </fieldset>
+        </form>
+    </div>
+
+    <!-- <div>
+        {%for product in products%}
+        <tr>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.inventory}}</td>
+        </tr>
+        {% endfor %}
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/shopmall.js"></script>
+</body>
+</html>
