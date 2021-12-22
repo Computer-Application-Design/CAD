@@ -1,0 +1,14 @@
+version: "3"
+
+services: 
+  mysql_server:
+    platform: linux/x86_64
+    image: mysql:8.0.26
+    environment: 
+      - MYSQL_DATABASE=shopdb
+      - MYSQL_USER=codynators
+      - MYSQL_PASSWORD=codynators1!
+      - MYSQL_ROOT_PASSWORD=rhgustjr9402!
+networks:
+  web_brige:
+    driver: bridge

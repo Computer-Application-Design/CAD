@@ -1,8 +1,8 @@
 FROM node:16
 
-WORKDIR /Admin
+WORKDIR /app
 
-COPY Admin/package.json /Admin/.
+COPY package.json .
 
 RUN npm install
 
@@ -10,6 +10,6 @@ COPY . .
 
 EXPOSE 4000
 
-VOLUME [ "/Admin/node_modules" ]
+VOLUME [ "/app/node_modules" ]
 
 CMD ["npm", "start"]
