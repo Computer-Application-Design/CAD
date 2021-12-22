@@ -43,6 +43,14 @@ app.use(session({
     secure: false,
   },
 }));
+
+
+app.get('/pong', (req, res) => {
+
+  res.send('[lecv ping] Hello!! I am user_con :]');
+
+});
+
 app.use(passport.initialize());
 app.use(passport.session());
 
