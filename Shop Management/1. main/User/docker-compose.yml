@@ -9,6 +9,8 @@ services:
       - MYSQL_USER=codynators
       - MYSQL_PASSWORD=codynators1!
       - MYSQL_ROOT_PASSWORD=rhgustjr9402!
+    volumes:
+      - './mysql_volume:/var/lib/mysql'
 networks:
   web_brige:
     driver: bridge
