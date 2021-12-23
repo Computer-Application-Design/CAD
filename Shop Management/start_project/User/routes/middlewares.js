@@ -1,3 +1,4 @@
+// 2017154003 고현석 
 exports.isLoggedIn = (req, res, next) => {
   if (req.isAuthenticated()) {
     next();

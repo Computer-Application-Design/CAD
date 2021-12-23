@@ -1,3 +1,4 @@
+// 2017154003 고현석 
 const Sequelize = require('sequelize');
 
 module.exports = class User extends Sequelize.Model {

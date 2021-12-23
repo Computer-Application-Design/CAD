@@ -1,3 +1,4 @@
+// 2017154003 고현석 
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
