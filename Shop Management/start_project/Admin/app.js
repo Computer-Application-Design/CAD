@@ -44,7 +44,8 @@ app.use(session({
   },
 }));
 
-
+//핑퐁위한 코드
+//2017156015박승찬
 app.get('/pong', (req, res) => {
 
   res.send('[lecv ping] Hi!!! I am admin_con :]');
