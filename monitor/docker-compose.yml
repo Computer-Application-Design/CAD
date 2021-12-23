@@ -14,7 +14,7 @@ services:
     container_name: monitor_cadvisor
     image: google/cadvisor:latest
     ports:
-      - 8080:8080
+      - 8090:8080
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:rw

@@ -21,7 +21,11 @@ nunjucks.configure('views', {
   watch: true,
 });
 connect();
+app.get('/pong', (req, res) => {
 
+  res.send('[lecv ping] Hello!! I am user_con :]');
+
+});
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public'))); // 정적 파일들을 제공하는 라우터 -> css 같은 파일들 경로 public폴더로 지정
 app.use(express.json());
