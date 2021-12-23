@@ -1,29 +1,7 @@
-// 사용자 등록 시
-// document.getElementById('user-form').addEventListener('submit', async (e) => {
-//     e.preventDefault();
-//     console.log("버튼눌림")
-//     const name = e.target.username.value;
-//     const age = e.target.age.value;
-//     const married = e.target.married.checked;
-//     if (!name) {
-//       return alert('이름을 입력하세요');
-//     }
-//     if (!age) {
-//       return alert('나이를 입력하세요');
-//     }
-//     try {
-//       await axios.post('/users', { name, age, married });
-//       getUser();
-//     } catch (err) {
-//       console.error(err);
-//     }
-//     e.target.username.value = '';
-//     e.target.age.value = '';
-//     e.target.married.checked = false;
-//   });
 
 
-// 상품 등록
+
+// 상품 등록  made by 2017152010 김태용
 document.getElementById('market-form').addEventListener('submit', async (e) => {
     e.preventDefault();
     console.log("버튼 눌림");

@@ -1,3 +1,4 @@
+//2017152010 made by 김태용
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose; // mongoose 객체를 받아옴

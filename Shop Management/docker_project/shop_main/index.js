@@ -1,3 +1,4 @@
+/*2017152010 made by 김태용*/
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan'); // 추가적인 로그를 확인하기 위해서
@@ -55,6 +56,6 @@ app.use((err, req, res, next) => {
   res.render('error'); 
 });
 
-app.listen(app.get('port'), () => { // 3000번 포트
+app.listen(app.get('port'), () => { // 4001번 포트
   console.log(app.get('port'), '번 포트에서 대기 중');
 });

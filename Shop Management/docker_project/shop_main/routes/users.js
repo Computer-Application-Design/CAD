@@ -1,10 +1,11 @@
+// 2017152010 made by 김태용
 const express = require('express');
 const User = require('../schemas/user');
 
 
 const router = express.Router();
 
-router.route('/')
+router.route('/') // localhost/user 접속 시
   .get(async (req, res, next) => {
     try {
       const users = await User.find({});

@@ -1,13 +1,14 @@
+// 2017152010 made by 김태용
 const express = require('express');
 const Product = require('../schemas/product');
 
 
 const router = express.Router();
 
-router.route('/')
+router.route('/') // localhost/productAdd 접근 시
  .get(async (req, res, next) => {
     try {
-      res.render('productAdd');
+      res.render('productAdd'); // productAdd.html을 response
     } catch (err) {
       console.error(err);
       next(err);
@@ -15,7 +16,7 @@ router.route('/')
   })
   .post(async (req, res, next) => {
     try {
-      const product = await Product.create({
+      const product = await Product.create({ // 상품 추가
         name: req.body.name,
         price: req.body.price,
         inventory: req.body.inventory,

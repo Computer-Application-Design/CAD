@@ -1,3 +1,4 @@
+// 2017152010 made by 김태용
 const express = require('express');
 //const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
 //const { Post, User, Hashtag } = require('../models');
@@ -13,7 +14,7 @@ router.use((req, res, next) => {
 });
 
 
-router.get('/', async (req, res, next) => {
+router.get('/', async (req, res, next) => { // localhost/포트 위치일 때
   try {
     //const products = await Product.find({}); // User.find() 메서드로 모든 사용자를 찾은 뒤 mongoose.html을 렌더링할 때 users 변수로 넣는다.
     //console.log(products);
@@ -21,28 +22,6 @@ router.get('/', async (req, res, next) => {
   } catch (err) {
     console.error(err);
     next(err);
-  }
-});
-
-router.get('/hashtag', async (req, res, next) => {
-  const query = req.query.hashtag;
-  if (!query) {
-    return res.redirect('/');
-  }
-  try {
-    const hashtag = await Hashtag.findOne({ where: { title: query } });
-    let posts = [];
-    if (hashtag) {
-      posts = await hashtag.getPosts({ include: [{ model: User }] });
-    }
-
-    return res.render('main', {
-      title: `${query} | NodeBird`,
-      twits: posts,
-    });
-  } catch (error) {
-    console.error(error);
-    return next(error);
   }
 });
 
