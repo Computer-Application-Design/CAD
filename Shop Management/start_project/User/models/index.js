@@ -1,3 +1,4 @@
+// 2017154003 고현석 
 const Sequelize = require('sequelize');
 const env = process.env.NODE_ENV || 'development';
 const config = require('../config/config')[env];

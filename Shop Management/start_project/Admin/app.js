@@ -1,3 +1,5 @@
+// 2017154003 고현석
+
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
@@ -14,7 +16,7 @@ const { sequelize } = require('./models');
 const passportConfig = require('./passport');
 
 const app = express();
-passportConfig(); // 패스포트 설정
+passportConfig();
 app.set('port', process.env.PORT);
 app.set('view engine', 'html');
 nunjucks.configure('views', {
